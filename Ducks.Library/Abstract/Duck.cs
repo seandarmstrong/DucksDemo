@@ -14,6 +14,11 @@ namespace Ducks.Library.Abstract
             Console.WriteLine("I'm Flying");
         }
 
+        public void Swim()
+        {
+            Console.WriteLine("I'm Swimming!");
+        }
+
         public abstract void Display();
     }
 }

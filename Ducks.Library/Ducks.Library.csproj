@@ -46,9 +46,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\Duck.cs" />
+    <Compile Include="Ducks\DecoyDuck.cs" />
     <Compile Include="Ducks\Mallard.cs" />
+    <Compile Include="Ducks\RubberDuck.cs" />
     <Compile Include="Ducks\WoodDuck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
