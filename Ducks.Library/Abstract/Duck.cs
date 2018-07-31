@@ -3,17 +3,19 @@ using Ducks.Library.Interfaces;
 
 namespace Ducks.Library.Abstract
 {
-    public abstract class Duck
+    public abstract class Duck : ICanFly
     {
         private IFlyBehavior _flyBehavior;
+        private ISoundBehavior _soundBehavior;
 
-        protected Duck(IFlyBehavior flyBehavior)
+        protected Duck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior)
         {
             _flyBehavior = flyBehavior;
+            _soundBehavior = soundBehavior;
         }
-        public void Quack()
+        public void MakeSound()
         {
-            Console.WriteLine("Quack");
+            _soundBehavior.MakeSound();
         }
 
         public void PerformFly()

@@ -8,9 +8,9 @@ using Ducks.Library.Interfaces;
 
 namespace Ducks.Library.Ducks
 {
-    public class RubberDuck : Duck
+    public class RubberDuck : Duck, IDebugCode
     {
-        public RubberDuck(IFlyBehavior flyBehavior) : base(flyBehavior)
+        public RubberDuck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior) : base(flyBehavior, soundBehavior)
         {
         }
         // TODO: I don't quack, I squeak.
@@ -18,9 +18,13 @@ namespace Ducks.Library.Ducks
         // TODO: I guess I can swim... if by swimming you mean floating and not going anywhere under my own power.
         public override void Display()
         {
-            Console.WriteLine("I'm small, yello, and made of rubber.");
+            Console.WriteLine("I'm small, yellow, and made of rubber.");
         }
 
-        
+
+        public void Debug()
+        {
+            Console.WriteLine("I'm listening to you describe your code.  All is well.");
+        }
     }
 }
