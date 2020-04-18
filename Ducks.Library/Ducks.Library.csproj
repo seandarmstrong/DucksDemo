@@ -8,9 +8,10 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Ducks.Library</RootNamespace>
     <AssemblyName>Ducks.Library</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,10 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\Duck.cs" />
+    <Compile Include="Behaviors\Flying\FlyWithThrowingBehavior.cs" />
     <Compile Include="Behaviors\Flying\FlyWithWingsBehavior.cs" />
     <Compile Include="Behaviors\Flying\NoFlyBehavior.cs" />
     <Compile Include="Behaviors\Sounds\NoSoundBehavior.cs" />
     <Compile Include="Behaviors\Sounds\QuackBehavior.cs" />
+    <Compile Include="Behaviors\Sounds\SqueakBehavior.cs" />
+    <Compile Include="Behaviors\Swimming\SwimWithFloat.cs" />
+    <Compile Include="Behaviors\Swimming\SwimWithSubmarineBehavior.cs" />
+    <Compile Include="Behaviors\Swimming\SwimWithWings.cs" />
     <Compile Include="Ducks\DecoyDuck.cs" />
     <Compile Include="Ducks\Mallard.cs" />
     <Compile Include="Ducks\RubberDuck.cs" />
@@ -58,6 +64,7 @@
     <Compile Include="Interfaces\IDebugCode.cs" />
     <Compile Include="Interfaces\IFlyBehavior.cs" />
     <Compile Include="Interfaces\ISoundBehavior.cs" />
+    <Compile Include="Interfaces\ISwimBehavior.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

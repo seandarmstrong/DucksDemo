@@ -7,11 +7,13 @@ namespace Ducks.Library.Abstract
     {
         private IFlyBehavior _flyBehavior;
         private ISoundBehavior _soundBehavior;
+        private ISwimBehavior _swimBehavior;
 
-        protected Duck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior)
+        protected Duck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior, ISwimBehavior swimBehavior)
         {
             _flyBehavior = flyBehavior;
             _soundBehavior = soundBehavior;
+            _swimBehavior = swimBehavior;
         }
         public void MakeSound()
         {
@@ -30,7 +32,7 @@ namespace Ducks.Library.Abstract
 
         public void Swim()
         {
-            Console.WriteLine("I'm Swimming!");
+            _swimBehavior.Swim(); 
         }
 
         public abstract void Display();

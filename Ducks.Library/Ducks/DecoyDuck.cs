@@ -11,7 +11,7 @@ namespace Ducks.Library.Ducks
     public class DecoyDuck : Duck
     {
 
-        public DecoyDuck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior) : base(flyBehavior, soundBehavior)
+        public DecoyDuck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior, ISwimBehavior swimBehavior) : base(flyBehavior, soundBehavior, swimBehavior)
         {
         }
 

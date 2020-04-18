@@ -7,11 +7,11 @@ using Ducks.Library.Interfaces;
 
 namespace Ducks.Library.Behaviors.Sounds
 {
-    public class NoSoundBehavior : ISoundBehavior
+    public class SqueakBehavior : ISoundBehavior
     {
         public void MakeSound()
         {
-            //throw new NotImplementedException();
+            Console.WriteLine("Squeak");
         }
     }
 }

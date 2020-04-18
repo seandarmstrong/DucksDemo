@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Ducks.Library.Interfaces;
 
-namespace Ducks.Library.Behaviors.Sounds
+namespace Ducks.Library.Behaviors.Swimming
 {
-    public class NoSoundBehavior : ISoundBehavior
+    public class SwimWithFloat : ISwimBehavior
     {
-        public void MakeSound()
+        public void Swim()
         {
-            //throw new NotImplementedException();
+            Console.WriteLine("I'm floating");
         }
     }
 }

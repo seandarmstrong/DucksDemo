@@ -6,7 +6,7 @@ namespace Ducks.Library.Ducks
 {
     public class Mallard : Duck
     {
-        public Mallard(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior) : base(flyBehavior, soundBehavior)
+        public Mallard(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior, ISwimBehavior swimBehavior) : base(flyBehavior, soundBehavior, swimBehavior)
         {
         }
         public override void Display()

@@ -6,7 +6,7 @@ namespace Ducks.Library.Ducks
 {
     public class WoodDuck : Duck
     {
-        public WoodDuck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior) : base(flyBehavior, soundBehavior)
+        public WoodDuck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior, ISwimBehavior swimBehavior) : base(flyBehavior, soundBehavior, swimBehavior)
         {
         }
         public override void Display()

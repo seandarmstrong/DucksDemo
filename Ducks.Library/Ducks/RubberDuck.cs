@@ -10,7 +10,7 @@ namespace Ducks.Library.Ducks
 {
     public class RubberDuck : Duck, IDebugCode
     {
-        public RubberDuck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior) : base(flyBehavior, soundBehavior)
+        public RubberDuck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior, ISwimBehavior swimBehavior) : base(flyBehavior, soundBehavior, swimBehavior)
         {
         }
         // TODO: I don't quack, I squeak.

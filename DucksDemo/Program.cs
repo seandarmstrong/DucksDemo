@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Ducks.Library.Abstract;
+﻿using Ducks.Library.Abstract;
 using Ducks.Library.Behaviors.Flying;
 using Ducks.Library.Behaviors.Sounds;
+using Ducks.Library.Behaviors.Swimming;
 using Ducks.Library.Ducks;
+using System;
+using System.Collections.Generic;
 
 
 namespace DucksDemo
@@ -17,10 +15,10 @@ namespace DucksDemo
         {
             var ducks = new List<Duck>()
             {
-                new Mallard(new FlyWithWingsBehavior(), new QuackBehavior()),
-                new WoodDuck(new FlyWithWingsBehavior(), new QuackBehavior()),
-                new RubberDuck(new NoFlyBehavior(), new NoSoundBehavior()),
-                new DecoyDuck(new NoFlyBehavior(), new NoSoundBehavior())
+                new Mallard(new FlyWithWingsBehavior(), new QuackBehavior(), new SwimWithWings()),
+                new WoodDuck(new FlyWithWingsBehavior(), new QuackBehavior(), new SwimWithWings()),
+                new RubberDuck(new FlyWithThrowingBehavior(), new SqueakBehavior(), new SwimWithFloat()),
+                new DecoyDuck(new NoFlyBehavior(), new NoSoundBehavior(), new SwimWithSubmarineBehavior())
             };
 
             foreach (var duck in ducks)
@@ -28,6 +26,7 @@ namespace DucksDemo
                 duck.Display();
                 duck.PerformFly();
                 duck.MakeSound();
+                duck.Swim();
                 Console.WriteLine();
             }
 
